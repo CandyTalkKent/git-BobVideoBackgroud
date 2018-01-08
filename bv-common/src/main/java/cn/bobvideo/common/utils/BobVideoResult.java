@@ -52,9 +52,7 @@ public class BobVideoResult implements Serializable{
         this.data = data;
     }
 
-//    public Boolean isOK() {
-//        return this.status == 200;
-//    }
+
 
     public Integer getStatus() {
         return status;
@@ -80,13 +78,7 @@ public class BobVideoResult implements Serializable{
         this.data = data;
     }
 
-    /**
-     * 将json结果集转化为TaotaoResult对象
-     * 
-     * @param jsonData json数据
-     * @param clazz TaotaoResult中的object类型
-     * @return
-     */
+  
     public static BobVideoResult formatToPojo(String jsonData, Class<?> clazz) {
         try {
             if (clazz == null) {
