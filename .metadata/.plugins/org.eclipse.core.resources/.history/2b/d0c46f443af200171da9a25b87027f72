@@ -1,0 +1,50 @@
+package cn.bobvideo.service.impl;
+
+import java.io.File;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.commons.lang3.RandomUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cn.bobvideo.mapper.VideoItemMapper;
+import cn.bobvideo.pojo.VideoItem;
+import cn.bobvideo.service.InsertOrUpdateVideoService;
+
+@Service
+public class InsertOrUpdateVideoServiceImpl implements InsertOrUpdateVideoService {
+	@Autowired
+	private VideoItemMapper videoItemMapper;
+
+	@Override
+	public void insertVideoItem() {
+
+		File file = new File("F:\videodownloads");
+		File[] files = file.listFiles();
+		for (File node : files) {
+			VideoItem videoItem = new VideoItem();
+			long long1 = RandomUtils.nextLong(1, 99999);
+			long long2 = RandomUtils.nextLong(99999, 9999999);
+			Long id = long1 + long2;
+			videoItem.setId(id);
+			videoItem.setCid(id);
+			videoItem.setName(node.getName());
+			videoItem.setImage("");
+			videoItem.setUrl("http://47.254.132.34/videoDownloads/" + file.getName());
+			videoItem.setSize(file.length());
+			videoItem.setCreated(new Date());
+			videoItem.setUpdated(new Date());
+
+			videoItemMapper.insertVideoItem(videoItem);
+
+		}
+
+	}
+
+	@Override
+	public List<VideoItem> selectVideoItems() {
+		List<VideoItem> selectVideoItems = videoItemMapper.selectVideoItems();
+		return selectVideoItems;
+	}
+}

@@ -1,0 +1,20 @@
+package cn.bobvideo.pojo;
+
+import java.io.Serializable;
+
+public class VideoItem implements Serializable{
+//	CREATE TABLE `video_item` (
+//			  `created` datetime NOT NULL,
+//			  `updated` datetime NOT NULL,
+//			  PRIMARY KEY (`id`),
+//			  KEY `cid` (`cid`),
+//			  KEY `updated` (`updated`)
+//			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='video表';
+	private Long id;
+	private Long size;
+	private Long cid;
+	private String name;
+	private String image;
+	private String url;
+
+}

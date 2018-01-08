@@ -1,0 +1,30 @@
+package cn.bobvideo.controller;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.bobvideo.common.utils.BobVideoResult;
+import cn.bobvideo.pojo.VideoItem;
+import cn.bobvideo.service.InsertOrUpdateVideoService;
+
+@Controller
+public class VideoItemController {
+
+	@Autowired
+	private InsertOrUpdateVideoService InsertOrUpdateVideoService;
+	
+	@RequestMapping("/updateOrInsertVideo")
+	@ResponseBody
+	public BobVideoResult updateOrInsertVideo(){
+		VideoItem videoItem = new VideoItem();
+		
+		videoItem.setId();
+		
+		return BobVideoResult.ok(200);
+	}
+	
+}

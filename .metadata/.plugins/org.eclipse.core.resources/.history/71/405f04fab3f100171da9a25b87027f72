@@ -1,0 +1,9 @@
+package cn.bobvideo.service;
+
+import cn.bobvideo.pojo.VideoItem;
+
+public interface InsertOrUpdateVideoService {
+
+	public void insertVideoItem();
+	
+}

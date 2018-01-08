@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TbItemMapper.xml&apos; to &apos;bv-videoprovide-dao/src/main/java/cn.bobvideo.mapper&apos;&#x0D;&#x0A;- Original project: &apos;bv-videoprovide-dao&apos;&#x0D;&#x0A;- Destination element: &apos;bv-videoprovide-dao/src/main/java/cn.bobvideo.mapper&apos;&#x0D;&#x0A;- Original element: &apos;TbItemMapper.xml&apos;" description="Copy file" destination="/src\/main\/java&lt;cn.bobvideo.mapper" element1="src/main/java/cn/bobvideo/mapper/TbItemMapper.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1514937603201" units="0" version="1.0"/>
+</session>

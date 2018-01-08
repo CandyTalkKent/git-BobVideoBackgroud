@@ -1,0 +1,20 @@
+package cn.bobvideo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.bobvideo.common.utils.BobVideoResult;
+
+@Controller
+public class VideoItemController {
+
+	@RequestMapping("/updateOrInsertVideo")
+	@ResponseBody
+	public BobVideoResult updateOrInsertVideo(){
+		
+		BobVideoResult bobVideoResult = new BobVideoResult();
+		return 
+	}
+	
+}

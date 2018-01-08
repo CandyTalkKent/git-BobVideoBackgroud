@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace：命名空间，用于隔离sql，还有一个很重要的作用，后面会讲 -->
+<mapper namespace="cn.bobvideo.mapper.VideoItemMapper">
+
+	<resultMap id="BaseResultMap" type="cn.bobvideo.pojo.VideoItem">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<id column="size" property="size" jdbcType="BIGINT" />
+		<id column="cid" property="cid" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="image" property="image" jdbcType="VARCHAR" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+		<result column="created" property="created" jdbcType="TIMESTAMP" />
+		<result column="updated" property="updated" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<select id="selectVideoItems" resultType="cn.bobvideo.pojo.VideoItem">
+		SELECT
+		*
+		FROM
+		video_item
+	</select>
+
+	<insert id="insertVideoItem" parameterType="cn.bobvideo.pojo.VideoItem">
+		<selectKey keyColumn="id" keyProperty="id" order="AFTER"
+			resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO
+		video_item (
+		id,
+		size,
+		`name`,
+		url,
+		image,
+		cid,
+		created,
+		updated
+		)
+		VALUES
+		(#{id},#{name},#{status},#{sort_order},#{is_parent},#{created},#{updated})
+	</insert>
+	<insert id="insert" parameterType="cn.luxurymall.pojo.TbContentCategory">
+		<!-- selectKey 标签实现主键返回 -->
+		<!-- keyColumn:主键对应的表中的哪一列 -->
+		<!-- keyProperty：主键对应的pojo中的哪一个属性 -->
+		<!-- order：设置在执行insert语句前执行查询id的sql，孩纸在执行insert语句之后执行查询id的sql -->
+		<!-- resultType：设置返回的id的类型 -->
+		<selectKey keyColumn="id" keyProperty="id" order="AFTER"
+			resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO
+		video_item (
+		parent_id,
+		`name`,
+		`status`,
+		sort_order,
+		is_parent,
+		created,
+		updated
+		)
+		VALUES
+		(#{parent_id},#{name},#{status},#{sort_order},#{is_parent},#{created},#{updated})
+	</insert>
+
+</mapper>

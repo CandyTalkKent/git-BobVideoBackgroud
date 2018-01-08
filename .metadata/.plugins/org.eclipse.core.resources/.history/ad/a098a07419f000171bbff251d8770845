@@ -1,0 +1,7 @@
+package cn.bobvideo.service;
+
+public interface InsertOrUpdateVideoService {
+
+	public void insertOrUpdateVideoItem(VideoItem videoItem);
+	
+}

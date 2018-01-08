@@ -1,0 +1,22 @@
+package cn.bobvideo.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.bobvideo.pojo.TbItem;
+
+@Controller
+public class TestFrameworkController {
+	
+	
+//	
+//	@ResponseBody
+//	public List<TbItem> getItemList(){
+//		
+//		
+//		
+//	}
+	
+}

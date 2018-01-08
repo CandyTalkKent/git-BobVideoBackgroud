@@ -1,0 +1,20 @@
+package cn.bobvideo.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import cn.bobvideo.pojo.TbItem;
+import cn.bobvideo.service.TestFrameworkService;
+
+@Service
+public class TestFrameworkServiceImpl implements TestFrameworkService {
+
+	
+	
+	@Override
+	public List<TbItem> getItemList() {
+		return null;
+	}
+
+}

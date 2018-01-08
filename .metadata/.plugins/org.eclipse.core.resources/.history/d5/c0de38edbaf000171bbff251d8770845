@@ -1,0 +1,29 @@
+package cn.bobvideo.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cn.bobvideo.mapper.TbItemMapper;
+import cn.bobvideo.mapper.VideoItemMapper;
+import cn.bobvideo.pojo.TbItem;
+import cn.bobvideo.pojo.VideoItem;
+import cn.bobvideo.service.TestFrameworkService;
+
+@Service
+public class TestFrameworkServiceImpl implements TestFrameworkService {
+
+	@Autowired
+	private VideoItemMapper videoItemMapper;
+	
+	@Override
+	public List<TbItem> getItemList() {
+		
+		List<VideoItem> selectVideoItems = videoItemMapper.selectVideoItems();
+		
+		
+		return selectVideoItems;
+	}
+
+}

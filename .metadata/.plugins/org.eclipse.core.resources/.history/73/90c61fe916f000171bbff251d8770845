@@ -1,0 +1,16 @@
+package cn.bobvideo.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class VideoItem implements Serializable{
+	private Long id;
+	private Long size;
+	private Long cid;
+	private String name;
+	private String image;
+	private String url;
+	private Date created;
+	private Date updated;
+
+}

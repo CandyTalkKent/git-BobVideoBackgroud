@@ -1,0 +1,9 @@
+package cn.bobvideo.service;
+
+import java.util.List;
+
+import cn.bobvideo.pojo.TbItem;
+
+public interface TestFrameworkService {
+	List<TbItem> getItemList();
+}

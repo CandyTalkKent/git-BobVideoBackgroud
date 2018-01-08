@@ -1,0 +1,7 @@
+package cn.bobvideo.mapper;
+
+import cn.bobvideo.pojo.VideoItem;
+
+public interface VideoItemMapper {
+	void insertOrUpdateVideoItem(VideoItem videoItem);
+}

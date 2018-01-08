@@ -1,0 +1,5 @@
+package cn.bobvideo.service;
+
+public interface TestFrameworkService {
+
+}
